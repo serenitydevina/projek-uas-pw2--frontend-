@@ -24,13 +24,15 @@ function App() {
   const [userName, setUser] = useState(localStorage.getItem("authUser"));
   const [activeLink, setActiveLink] = useState(null);
 
-  
+  console.log(token);
+
+  const navigate = Navigator;
 
   useEffect(() => {
     const handleStorageChange = () => {
       setToken(localStorage.getItem("authToken"));
       setUser(localStorage.getItem("authUser"));
-      navigate("/"); 
+      navigate("/");
     };
 
     window.addEventListener("storage", handleStorageChange);
@@ -51,12 +53,7 @@ function App() {
     "/createbunga": 8,
     "/flowers/edit/:id": 9,
   };
-  
-  const handleLogin = () => {
-    const getToken = token;
-    const getUser = userName;
-    navigate("/");
-  };
+
   function HandleMarsRenderer() {
     const location = useLocation();
     return location.pathname === "/" ? <MarsBackground /> : null;

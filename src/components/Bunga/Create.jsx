@@ -11,7 +11,6 @@ function createBunga () {
 
     const navigate = useNavigate();
 
-
     const handleFileChange = (event) => {
         setFotoBunga(event.target.files[0]);
     };
@@ -24,6 +23,8 @@ function createBunga () {
         formData.append('nama_bunga', namaBunga);
         formData.append('deskripsi', deskripsiBunga);
 
+        const token = localStorage.getItem("authToken");
+
         try {
             const response = await axios.post(
                 "https://back-end-laravel.vercel.app/api/api/bunga",
@@ -31,6 +32,7 @@ function createBunga () {
                 {
                     headers: {
                         "Content-Type": "multipart/form-data",
+                        "Authorization": `Bearer ${token}`
                     }
                 }
             );

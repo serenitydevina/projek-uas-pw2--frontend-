@@ -49,12 +49,16 @@ export default function EditBunga() {
         });
 
         try {
+            const token = localStorage.getItem("authToken");
+
             const response = await axios.post(
                 `https://back-end-laravel.vercel.app/api/api/bunga/${id}`,
                 formData,
                 {
                     headers: {
-                        "Content-Type": "multipart/form-data", // Pastikan header ini diatur
+                        "Content-Type": "multipart/form-data",
+                        "Authorization": `Bearer ${token}`
+                        // Pastikan header ini diatur
                     },
                 }
             );

@@ -35,7 +35,11 @@ function ListBunga() {
     }).then((response) => {
       if (response.isConfirmed) {
         axios
-          .delete(`https://back-end-laravel-main-de9x.vercel.app/api/api/bunga/${id}`)
+            .delete(`https://back-end-laravel.vercel.app/api/api/bunga/${id}`, {
+              headers: {
+                "Authorization": `Bearer ${token}`, // Tambahkan token ke header
+              },
+            })
           .then(() => {
             setFlowers(flowers.filter((flower) => flower.id !== id));
             Swal.fire('Deleted!', `${nama_bunga} has been deleted.`, 'success');
