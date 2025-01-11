@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-container {
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding-right: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #2323230e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.about-us-container::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 10px; 
+  border: 2px solid #232323; 
+}
+
+.about-us-container::-webkit-scrollbar-track {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #4caf50;
+}
+
+.card-text {
+  color: #fff;
+}
+
+.typewriter {
+  color: #ff6347;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ff6347;
+  font-size: 2rem;
+  animation: typing 10s steps(20, end) infinite, blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: #ff6347; 
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

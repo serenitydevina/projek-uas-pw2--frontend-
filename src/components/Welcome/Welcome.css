@@ -1,0 +1,78 @@
+.welcome-container {
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.welcome-btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+.welcome-btn:hover {
+    transform: scale(5.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.welcome-button-container {
+    margin-top: 30px;
+    animation: fadeInButton 2s ease-in-out;
+    animation-delay: 2s;
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

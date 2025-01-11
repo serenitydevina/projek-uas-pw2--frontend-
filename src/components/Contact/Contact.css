@@ -1,0 +1,4 @@
+input::placeholder, textarea::placeholder {
+  color: #f8f9fa !important;
+  opacity: 1 !important;
+}
